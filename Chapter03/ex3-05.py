@@ -1,0 +1,6 @@
+print("Hell,World!")
+print('Hell,World!')
+print(2.2+2.2)
+print(True)
+print(False)
+print(None)
