@@ -1,5 +1,5 @@
-age=123
-if age<100:
-    print("２桁の数字です")
+age=12
+if age<10:
+    print("1桁の数字です")
 else:
-    print("３桁の数字です")
+    print("2桁以上の数字です")
