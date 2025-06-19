@@ -2,15 +2,7 @@ import random
 
 def hangman(word):
     wrong=0
-    stages=["",
-             "__________      ",
-             "|        |      ",
-             "|        |      ",
-             "|        0      ",
-             "|       /|\\     ",
-             "|       / \\     ",
-             "|               "
-              ]
+    stages=["","","",""]
     rletters=list(word)
     board=["_"] * len(word)
     win=False
@@ -26,7 +18,7 @@ def hangman(word):
         else:
             wrong+=1
         print(" ".join(board))
-        e=wrong+1
+        e=wrong
         print("\n".join(stages [0:e]))
         if "_" not in board:
             print("あなたの勝ち!")
@@ -34,7 +26,7 @@ def hangman(word):
             win=True
             break
     if not win:
-        print("\n".join(stages[0:wrong]))
+        print("\n".join(stages[-1]))
         print("あなたの負け! 正解は {}.".format(word))
 
 ans=["ホシノ","シロコ","ノノミ","アヤネ","セリカ"]
